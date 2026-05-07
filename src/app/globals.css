@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f9f7;
+  --foreground: #1a2e22;
+  --card: #ffffff;
+  --card-foreground: #1a2e22;
+  --muted: #e8eee9;
+  --muted-foreground: #4d6356;
+  --border: #dce6df;
+}
+
+.dark {
+  --background: #121a16;
+  --foreground: #e8f0ea;
+  --card: #1a2520;
+  --card-foreground: #e8f0ea;
+  --muted: #2a3830;
+  --muted-foreground: #a8bdb0;
+  --border: #2f4036;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Leaflet container — evita overflow em layouts flex */
+.leaflet-container {
+  font-family: inherit;
+}
